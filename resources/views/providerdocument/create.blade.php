@@ -38,7 +38,7 @@
                                     $is_required = optional($provider_document->document)->is_required == 1 ? '*' : '';
                                 @endphp
 
-                                <div class="form-group col-md-4">
+                                <div class="form-group col-md-4"> 
                                     {{ Form::label('name', __('messages.select_name',[ 'select' => __('messages.document') ]).' <span class="text-danger">* </span>',['class'=>'form-control-label'],false) }}
                                     <br />
                                     {{ Form::select('document_id', [optional($provider_document->document)->id => optional($provider_document->document)->name." ".$is_required], optional($provider_document->document)->id, [
@@ -51,6 +51,23 @@
                                     }}
                                     <a href="{{ route('document.create') }}"><i class="fa fa-plus-circle mt-2"></i> {{ trans('messages.add_form_title',['form' => trans('messages.document')  ]) }}</a>
                                 </div>
+                                
+                                 <div class="form-group col-md-4">
+                                    {{ Form::label('name', __('messages.select_name',[ 'select' => __('Address Proof') ]).' <span class="text-danger">* </span>',['class'=>'form-control-label'],false) }}
+                                    <br />
+                                    {{ Form::select('document_id_address', [optional($provider_document->document)->id => optional($provider_document->document)->name." ".$is_required], optional($provider_document->document)->id, [
+                                            'class' => 'select2js form-group document_id_address',
+                                            'id' => 'document_id_address',
+                                            'required',
+                                            'data-placeholder' => __('messages.select_name',[ 'select' => __('messages.document') ]),
+                                            'data-ajax--url' => route('ajax-list', ['type' => 'documents']),
+                                        ])
+                                    }}
+                                    <a href="{{ route('document.create') }}"><i class="fa fa-plus-circle mt-2"></i> {{ trans('messages.add_form_title',['form' => trans('messages.document')  ]) }}</a>
+                                </div>
+                                
+                                
+                                
                                 @if(auth()->user()->hasAnyRole(['admin','demo_admin']))
                                 <div class="form-group col-md-4">
                                     {{ Form::label('is_verified',trans('messages.is_verify').' <span class="text-danger">*</span>',['class'=>'form-control-label'],false) }}
@@ -70,11 +87,52 @@
                                     </div>
                                     <!-- <span class="selected_file"></span> -->
                                 </div>
+                                
+                                 <div class="form-group col-md-4">
+                                    <label class="form-control-label" for="provider_documentaddress">{{ __('Upload Address Proof') }} <span class="text-danger" id="document_required">*</span> </label>
+                                    <div class="custom-file">
+                                        <input type="file" id="provider_documentaddress" name="provider_documentaddress" class="custom-file-input" @if(!$provider_document || !getMediaFileExit($provider_document, 'provider_document')) required @endif>
+                                        @if($provider_document && getMediaFileExit($provider_document, 'provider_document'))
+                                        <label class="custom-file-label upload-label">{{ $provider_document->getFirstMedia('provider_document')->file_name }}</label>
+                                        @else
+                                        <label class="custom-file-label upload-label">{{  __('messages.choose_file',['file' =>  __('messages.document') ]) }}</label>
+                                        @endif
+                                    </div>
+                                    <!-- <span class="selected_file"></span> -->
+                                </div>
+                                
+                                 
                                 @if(getMediaFileExit($provider_document, 'provider_document'))
                                     <div class="col-md-2 mb-2">
                                         <?php
                                             $file_extention = config('constant.IMAGE_EXTENTIONS');
                                             $image = getSingleMedia($provider_document,'provider_document');
+                                            
+                                            $extention = in_array(strtolower(imageExtention($image)),$file_extention);
+                                        ?>
+                                            @if($extention)   
+                                                <img id="provider_document_preview" src="{{ $image }}" alt="#" class="attachment-image mt-1" >
+                                            @else
+                                                <img id="provider_document_preview" src="{{ asset('images/file.png') }}" class="attachment-file">
+                                            @endif
+                                            <a class="text-danger remove-file" href="{{ route('remove.file', ['id' => $provider_document->id, 'type' => 'provider_document']) }}"
+                                                data--submit="confirm_form"
+                                                data--confirmation='true'
+                                                data--ajax="true"
+                                                title='{{ __("messages.remove_file_title" , ["name" =>  __("messages.image") ]) }}'
+                                                data-title='{{ __("messages.remove_file_title" , ["name" =>  __("messages.image") ]) }}'
+                                                data-message='{{ __("messages.remove_file_msg") }}'>
+                                                <i class="ri-close-circle-line"></i>
+                                            </a>
+                                            <a href="{{ $image }}" class="d-block mt-2" download target="_blank"><i class="fas fa-download "></i> {{ __('messages.download') }}</a>
+                                    </div>
+                                @endif
+                                
+                                     @if(getMediaFileExit($provider_document, 'provider_documentaddress'))
+                                    <div class="col-md-2 mb-2">
+                                        <?php
+                                            $file_extention = config('constant.IMAGE_EXTENTIONS');
+                                            $image = getSingleMedia($provider_document,'provider_documentaddress');
                                             
                                             $extention = in_array(strtolower(imageExtention($image)),$file_extention);
                                         ?>

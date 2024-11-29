@@ -13,12 +13,13 @@ class ProviderDocument extends Model implements HasMedia
     use HasFactory,InteractsWithMedia,SoftDeletes;
     protected $table = 'provider_documents';
     protected $fillable = [
-       'provider_id','document_id','is_verified'
+       'provider_id','document_id','is_verified','document_id_address'
     ];
 
     protected $casts = [
         'provider_id'   => 'integer',
         'document_id'   => 'integer',
+        'document_id_address'   => 'integer',
         'is_verified'   => 'integer',
     ];
 
@@ -26,6 +27,9 @@ class ProviderDocument extends Model implements HasMedia
         return $this->belongsTo('App\Models\User','provider_id','id')->withTrashed();
     }   
     public function document(){
+        return $this->belongsTo('App\Models\Documents','document_id','id')->withTrashed();
+    }
+     public function document_address(){
         return $this->belongsTo('App\Models\Documents','document_id','id')->withTrashed();
     }
     public function scopeMyDocument($query){
@@ -41,5 +45,6 @@ class ProviderDocument extends Model implements HasMedia
         return  $query->whereHas('document',function ($q) {
             $q->where('status',1);
         });
+        
     }
 }

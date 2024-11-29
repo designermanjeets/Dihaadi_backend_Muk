@@ -117,6 +117,11 @@
                         title: "{{ __('messages.document') }}"
                     },
                     {
+                        data: 'document_id_address',
+                        name: 'document_id_address',
+                        title: "{{ __('Address proof') }}"
+                    },
+                    {
                         data: 'is_verified',
                         name: 'is_verified',
                         title: "{{ __('messages.is_verified') }}"

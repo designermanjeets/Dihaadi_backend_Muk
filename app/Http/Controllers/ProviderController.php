@@ -14,6 +14,8 @@ use Carbon\Carbon;
 use Yajra\DataTables\DataTables;
 use Hash;
 use App\Models\Setting;
+use App\Models\ProviderDocument;
+use DB;
 
 class ProviderController extends Controller
 {
@@ -45,7 +47,7 @@ class ProviderController extends Controller
     {
         $query = User::query();
         $filter = $request->filter;
-
+        
         if (isset($filter)) {
             if (isset($filter['column_status'])) {
                 $query->where('status', $filter['column_status']);
@@ -72,6 +74,20 @@ class ProviderController extends Controller
             ->editColumn('display_name', function ($query) {
                 return view('provider.user', compact('query'));
             })
+            
+             ->editColumn('document', function ($query) {
+                 
+             $id =  DB::table('provider_documents')->where('provider_id', $query->id)->value('id');
+               $provider_document = ProviderDocument::find($id);
+                return view('provider.document', compact('provider_document'));
+            })
+            
+             ->editColumn('document_address', function ($query) {
+                $id =  DB::table('provider_documents')->where('provider_id', $query->id)->value('id');
+               $provider_document = ProviderDocument::find($id);
+                return view('provider.document_address', compact('provider_document'));
+            })
+            
             ->editColumn('status', function($query) {
                 if($query->status == '0'){
                     $status = '<a class="btn-sm text-white btn-success"  href='.route('provider.approve',$query->id).'><i class="fa fa-check"></i>Approve</a>';
