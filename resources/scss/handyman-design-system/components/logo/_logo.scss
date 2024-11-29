@@ -1,0 +1,54 @@
+.navbar-brand {
+    svg {
+        height: 50px;
+    }
+    
+    img {
+        height: 50px;
+    }
+}
+
+.nav {
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+
+        .logo-title {
+            margin-left: $spacer;
+            color: $dark;
+            margin-bottom: 0;
+            z-index: 1;
+        }
+    }
+}
+
+
+.logo-main {
+    .logo-mini {
+        display: none;
+    }
+
+    .logo-normal {
+        display: block;
+    }
+}
+
+@include media-breakpoint-down(xl) {
+    .iq-navbar {
+        .navbar-brand {
+            margin-left: 2rem;
+        }
+    }
+
+    .iq-navbar {
+        .mobile-offcanvas {
+            &:not(.horizontal-nav) {
+                .navbar-brand {
+                    align-items: center;
+                    flex: 1;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}

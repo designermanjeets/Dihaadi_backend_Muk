@@ -1,0 +1,10 @@
+.iq-icon-box{
+    &.with-numbers{
+        .number{
+            display: inline-block;
+            height: 46px;
+            width: 46px;
+            line-height: 46px;
+        }
+    }
+}

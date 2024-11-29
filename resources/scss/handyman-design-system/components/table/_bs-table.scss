@@ -1,0 +1,186 @@
+.table {
+    thead {
+        white-space: nowrap;
+
+        tr {
+            background-color: $body-bg;
+
+            th {
+                text-transform: capitalize;
+                letter-spacing: $table-th-letter-spacing;
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            td {
+                vertical-align: middle;
+
+                .iq-sub-label {
+                    margin-bottom: 0.125rem;
+                }
+            }
+        }
+    }
+
+    &.table-dark {
+        tbody {
+            tr {
+                td {
+                    color: $body-bg;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+
+    overflow: hidden;
+}
+
+.table> :not(:last-child)> :last-child>* {
+    border-bottom-color: transparent;
+}
+
+.table-responsive {
+    &::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+        border-radius: 20px;
+    }
+
+    /* Scroll Track */
+    &::-webkit-scrollbar-track {
+        background: $body-bg;
+        border-radius: 20px;
+    }
+
+    /* Scroll Handle */
+    &::-webkit-scrollbar-thumb {
+        background: rgba($dark, 0.2);
+        border-radius: 20px;
+        transition: all 400ms ease;
+        cursor: pointer;
+    }
+
+    /* Scroll Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: rgba($dark, 0.2);
+        border-radius: 20px;
+        transition: all 400ms ease;
+        cursor: pointer;
+    }
+
+    .dataTables_wrapper {
+        .row {
+            .dataTables_length {
+                padding-left: $spacer * 1.5;
+            }
+
+            .dataTables_filter,
+            .dataTables_paginate {
+                padding-right: $spacer * 1.5;
+            }
+
+            .dataTables_info {
+                padding-left: $spacer * 1.5;
+                padding-top: unset;
+            }
+        }
+    }
+}
+
+.table-dark {
+    td {
+        color: $body-bg !important;
+        vertical-align: middle;
+    }
+}
+
+thead,
+tbody,
+tfoot,
+tr,
+td,
+th {
+    white-space: nowrap;
+}
+
+.table-lg {
+
+    // stylelint-disable-next-line selector-max-universal
+    > :not(caption)>*>* {
+        padding: $table-cell-padding-y $table-cell-padding-x;
+    }
+}
+
+#appointment-table-tab {
+    .nav-link {
+        background-color: rgba(222,226,230,.1);
+        border-width: 1px;
+        border-style: solid;
+        border-color: var(--bs-border-color);
+        color: var(--#{$prefix}body-color);
+
+        &.active{
+            color: var(--bs-white);
+            background-color: var(--bs-primary);
+            border-color: var(--bs-primary);
+        }
+    }
+}
+
+.booking-table{
+    tr{
+        td{
+            text-align: end;
+        }
+    }
+    tr{
+        &:last-child{
+            background-color: rgba(var(--bs-light-rgb));
+            color: var(--heading-color);
+            text-transform: capitalize;
+            padding-left: 0;
+        }
+    }
+}
+
+.table-border-none{
+    tr,td,th{
+        border-color: transparent;
+    }
+}
+
+.booking-detail-table{
+    tr{
+        th{
+            text-transform: capitalize;
+            color: $headings-color;
+            font-family: $font-family-monospace;
+            font-weight: 500;
+            padding-left: 0;
+        }
+    }
+    .status-text{
+        font-family: $font-family-monospace;
+        font-weight: 500;
+    }
+}
+
+.booking-table {
+    tr {
+        &:last-child {
+            border-radius: $border-radius-lg;
+            background-color: $light;
+        }
+    }
+}
+
+.booking-detail-table{
+    tr{
+        th{
+            color: var(--heading-color);
+        }
+    }
+} 

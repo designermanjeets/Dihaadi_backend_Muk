@@ -1,0 +1,128 @@
+// provider image
+.provider-section {
+  .provider-1 {
+    right: -50px;
+    left: auto;
+  }
+  .provider-5 {
+    left: 70px;
+    right: auto;
+  }
+  .provider-3 {
+    left: 80px;
+    right: auto;
+  }
+  .provider-4 {
+    left: -100px;
+    right: auto;
+  }
+}
+
+.search-form {
+  .search-icon {
+    right: auto;
+    left: 1px;
+  }
+}
+
+// service details
+.service-detail {
+  .service-meta-list {
+    li {
+      padding-left: 16px;
+      margin-left: 11px;
+      margin-right: 0;
+      &::after{
+        left: 0;
+        right: auto;
+      }
+      &:last-child {
+        padding-left: 0;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+#back-to-top{
+  .top{
+    right: auto;
+    left: 1.563rem;
+  }
+}
+
+// Bootstrup Class
+.start-0 {
+  right: 0 !important;
+  left: auto !important;
+}
+.start-50 {
+  right: 50% !important;
+  left: auto !important;
+}
+.start-100 {
+  right: 100% !important;
+  left: auto !important;
+}
+
+.end-0 {
+  left: 0 !important;
+  right: auto !important;
+}
+
+.end-50 {
+  left: 50% !important;
+  right: auto !important;
+}
+
+.end-100 {
+  left: 100% !important;
+  right: auto !important;
+}
+
+div{
+  &.dataTables_wrapper{
+    div{
+      &.dataTables_filter{
+        text-align: left;
+      }
+    }
+  }
+}
+
+.dataTables_wrapper {
+  .form-control,
+  .form-select {
+    padding: $input-padding-y $input-padding-x $input-padding-y 2rem;
+  }
+
+  .form-select{
+    background-position: left 1rem center;
+  }
+
+  .dataTables_filter {
+    label{
+      &::after {
+        right: auto;
+        left: 1rem;
+      }
+    }
+  }
+}
+
+.vc-base-icon{
+  transform: scaleX(-1);
+}
+
+.input-group> :not(:first-child):not(.dropdown-menu):not(.form-floating):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback){
+  margin-left: 0;
+}
+
+.user-dropdown {
+  &:has(.location-search-dropdown) {
+    .custom-btn-close {
+      left: -0.8rem;
+      right: auto;
+    }
+  }
+}

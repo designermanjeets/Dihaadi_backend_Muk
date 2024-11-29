@@ -1,0 +1,26 @@
+
+// Card Profile Progress
+.card-profile-progress {
+    margin-top: 1.25rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .circle-progress-white {
+        svg {
+            .circle-progress-value {
+                stroke: var(--bs-white);
+            }
+            .circle-progress-text {
+                fill: var(--bs-white);
+            }
+        }
+    }
+
+    .circle-progress {
+        width: 9.375rem;
+        height: 9.375rem;
+    }
+}

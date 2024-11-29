@@ -1,0 +1,35 @@
+.status-timeline{
+    .status-timeline-wrapper{
+        .timeline-time-block {
+            padding-right: 0;
+            padding-left: 50px;
+        }
+
+        .timeline-content-block{
+            padding-left: 0;
+            padding-right: 50px;
+        }
+    }
+}       
+
+@media (max-width: 767.98px){
+    .status-timeline{
+        .status-timeline-wrapper{
+            padding-left: 0;
+            padding-right: 40px;
+
+            .timeline-time-block {
+                padding-left: 0;
+            }
+    
+            .timeline-content-block{
+                padding-right: 0;
+            }
+
+            .timline-border{
+                left: auto;
+                right: 0;
+            }
+        }
+    }
+}

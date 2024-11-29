@@ -1,0 +1,34 @@
+:root {
+    --prefix: #{$variable-prefix};
+
+    @mixin custom-color-variables($color-name: 'primary', $color-value: $primary) {
+        --#{$variable-prefix}#{$color-name}: #{$color-value};
+        --#{$variable-prefix}#{$color-name}-rgb: #{to-rgb($color-value)};
+        --#{$variable-prefix}#{$color-name}-bg-subtle: #{tint-color($color-value, 80%)};
+        --#{$variable-prefix}#{$color-name}-border-subtle: var(--#{$variable-prefix}#{$color-name}-bg-subtle);
+        --#{$variable-prefix}link-color-rgb: var(--#{$variable-prefix}#{$color-name}-rgb);
+        --#{$variable-prefix}#{$color-name}-hover-bg: #{shade-color($color-value, 20%)};
+        --#{$variable-prefix}#{$color-name}-hover-border: #{shade-color($color-value, 30%)};
+        --#{$variable-prefix}#{$color-name}-active-bg: #{shade-color($color-value, 20%)};
+        --#{$variable-prefix}#{$color-name}-active-border: #{shade-color($color-value, 30%)};
+        --#{$variable-prefix}#{$color-name}-hover-bg: #{shade-color($color-value, 20%)};
+        --#{$variable-prefix}#{$color-name}-btn-disabled-color: #{color-contrast($color-value)};
+
+        &[data-#{$variable-prefix}theme="dark"] {
+            --#{$variable-prefix}#{$color-name}-text-emphasis: #{tint-color($color-value, 40%)};
+            --#{$variable-prefix}#{$color-name}-bg-subtle: #{shade-color($color-value, 80%)};
+        }
+
+    }
+
+    @include custom-color-variables('primary', $primary);
+    @include custom-color-variables('secondary', $secondary);
+    @include custom-color-variables('success', $success);
+    @include custom-color-variables('info', $info);
+    @include custom-color-variables('warning', $warning);
+    @include custom-color-variables('danger', $danger);
+    @include custom-color-variables('light', $light);
+    @include custom-color-variables('dark', $dark);
+    @include custom-color-variables('gray', $gray);
+    @include custom-color-variables('gray-dark', $gray-dark);
+}

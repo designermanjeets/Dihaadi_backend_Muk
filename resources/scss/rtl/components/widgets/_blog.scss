@@ -1,0 +1,41 @@
+.iq-blog {
+  .iq-post-details {
+    .blog-meta-data {
+      .blog-categories {
+        li {
+          &:not(:last-child):after {
+            left: -0.8rem;
+            right: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+.blog-detail {
+  .blog-heading-part {
+    .blog-heading-box {
+      .blog-tag {
+        li {
+          &:not(:first-child) {
+            padding-right: 0.75rem;
+            margin-right: 0.375rem;
+            padding-left: 0;
+            margin-left: 0;
+            &::before {
+              right: 0;
+              left: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+  .quote-box {
+    .quote {
+      left: 20px;
+      right: auto;
+    }
+  }
+}

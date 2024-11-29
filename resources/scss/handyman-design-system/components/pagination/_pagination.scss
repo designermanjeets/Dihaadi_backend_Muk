@@ -1,0 +1,60 @@
+// BLOG/SHOP pagination
+.page-numbers {
+    li {
+      .page-numbers {
+        display: block;
+        padding: 0 15px;
+        margin: 0 5px;
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        color: var(--#{$variable-prefix}primary);
+        border: 1px solid rgba(134, 140, 156, 0.18);
+        cursor: pointer;
+  
+        &.current {
+          background-color: var(--#{$variable-prefix}primary);
+          color: $white;
+          border-color: var(--#{$variable-prefix}primary);
+        }
+  
+        &:hover {
+          background-color: var(--#{$variable-prefix}primary);
+          color: $white;
+          border-color: var(--#{$variable-prefix}primary);
+        }
+      }
+    }
+  }
+
+.pagination{
+  .pagination-link {
+    position: relative;
+    display: block;
+    color: var(--bs-body-color);
+    padding: var(--bs-pagination-padding-y) var(--bs-pagination-padding-x);
+    background-color: transparent;
+    border: var(--bs-pagination-border-width) solid var(--bs-border-color);
+
+    &:first-child{
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+    }
+
+    &:last-child{
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+
+    &.active,&:hover{
+      background-color: var(--bs-primary);
+      color: var(--bs-white);
+    }
+
+    &:disabled{
+      color: var(--bs-pagination-disabled-color);
+      pointer-events: none;
+      background-color: var(--bs-border-color);
+    }
+  }
+}

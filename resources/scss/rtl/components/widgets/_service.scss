@@ -1,0 +1,51 @@
+.service-box-card {
+    .serv-whishlist {
+        left: 1rem;
+        right: auto;
+    }
+
+    .price-content {
+        li {
+            &.service-price {
+                padding-right: 12px;
+                margin-right: 6px;
+                padding-left: 0;
+                margin-left: 0;
+
+                &::before {
+                    right: 0;
+                    left: auto;
+                }
+            }
+        }
+    }
+
+    .iq-image {
+        .online-service{
+            left: auto;
+            right: 16px;
+        }
+    }
+}
+
+.booking-detail-service-box {
+    .category-list {
+        li {
+            margin-right: 0;
+            padding-right: 0;
+            margin-left: .5rem;
+            padding-left: 1rem;
+
+            &::after {
+                content: "\f053";
+                right: auto;
+                left: 0;
+            }
+
+            &:last-child {
+                padding-left: 0;
+                margin-left: 0;
+            }
+        }
+    }
+}

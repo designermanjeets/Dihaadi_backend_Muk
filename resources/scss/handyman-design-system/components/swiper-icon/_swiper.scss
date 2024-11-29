@@ -1,0 +1,112 @@
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev,
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev,
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next,
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next {
+  transform: scale(1);
+}
+
+// swiper arrow button
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: var(--bs-gray-300);
+  color: var(--#{$variable-prefix}body-color);
+  height: 30px;
+  width: 30px;
+  margin-top: 0;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: all .5s ease-in-out;
+
+  &:after {
+    font-size: 12px;
+  }
+
+  &:hover{
+    background-color: var(--#{$variable-prefix}primary);
+    color: $white;
+  }
+}
+
+.testimonial-section {
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    background-color: var(--#{$variable-prefix}secondary);
+  }
+}
+
+.arrow-joint {
+  width: 110px;
+  height: 45px;
+
+  .swiper-button-next {
+    right: 0;
+  }
+
+  .swiper-button-prev {
+    left: 0;
+  }
+}
+
+.bg-primary,
+.bg-secondary {
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    background-color: $white;
+    color: var(--#{$variable-prefix}primary);
+  }
+}
+
+
+/*=======================
+swiper-pagination
+===========================*/
+.swiper-pagination{
+  position: static;
+  margin: 32px auto 0;
+}
+
+.swiper-container-horizontal {
+  .swiper-pagination-bullets {
+    &.swiper-pagination-bullets-dynamic {
+      position: static;
+      transform: none;
+      margin: 32px auto 0;
+    }
+  }
+}
+
+.swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic, 
+.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{
+  transform: none;
+}
+
+.swiper-pagination-bullet {
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: var(--#{$variable-prefix}primary-bg-subtle);
+  border: none;
+  opacity: 1;
+  margin: 0 4px;
+  transition: all .5s ease-in-out;
+}
+
+.swiper-pagination-bullet-active {
+  width: 22px;
+  border-radius: 8px;
+  background: var(--#{$variable-prefix}primary);
+}
+
+.bg-primary,
+.bg-secondary {
+  .swiper-pagination-bullet {
+    border-color: $white;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: $white;
+  }
+}

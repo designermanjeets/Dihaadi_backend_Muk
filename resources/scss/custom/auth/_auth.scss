@@ -1,0 +1,132 @@
+.authontication-forms {
+    .modal-header {
+        .btn-close {
+            position: absolute;
+            left: auto;
+            right: 1rem;
+            top: 1rem;
+            z-index: 1;
+        }
+    }
+    .modal-body {
+        padding: 3rem 2.5rem;
+        .iq-login-form {
+            label {
+                font-weight: 500;
+                line-height: 175%;
+                text-transform: capitalize;
+                color: var(--heading-color);
+                margin-bottom: .83rem;
+            }
+            .input-group {
+                .input-group-text {
+                    border-color: transparent;
+                }
+                input {
+                    padding-left: 0;
+                    border-color: transparent;
+                    &:focus {
+                        border-color: transparent;
+                    }
+                }
+                textarea {
+                    padding-left: 0;
+                    padding-top: 9px;
+                    &:focus {
+                        border-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+
+    .iq-login-form{
+        .text-signup {
+            label {
+                font-size: 1rem;
+                font-weight: 600;
+            }
+            .btn-link {
+                font-size: 1rem;
+                font-weight: 600;
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    &.register-page {
+        .modal-dialog {
+            max-width: 700px;
+        }
+    }
+}
+
+.social-login-label {
+    position: relative;
+    color: $body-color;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.0625rem;
+    text-transform: uppercase;
+    span {
+        position: relative;
+        display: inline-block;
+        padding: 0 1rem;
+        background-color: rgba(var(--bs-light-rgb), 1);
+    }
+    &::before {
+        position: absolute;
+        content: "";
+        top: 50%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: var(--bs-border-color);
+        height: 1px;
+    }
+}
+
+.social-login {
+    ul {
+        li {
+            a {
+                display: block;
+                width: 2.375rem;
+                height: 2.375rem;
+                line-height: 2.375rem;
+                text-align: center;
+                background: var(--bs-gray-300);
+                border-radius: 0.25rem;
+                transition: all .3s ease 0s;
+                &:hover {
+                    background: var(--bs-gray-200);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .authontication-forms {
+        .modal-body {
+            padding: 1rem;
+        }
+    }
+}
+
+.custom-btn-close{
+    position: absolute;
+    left: auto;
+    right: -1.25rem;
+    top: -1.25rem;
+    z-index: 1;
+    cursor: pointer;
+}
+
+@media (max-width: 575.98px){
+    .custom-btn-close{
+        right: -.8rem;
+        top: -.8rem;
+    }
+}

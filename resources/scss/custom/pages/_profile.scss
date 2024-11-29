@@ -1,0 +1,50 @@
+.profile-block {
+    padding: 60px 110px;
+    &.bg-light {
+        .input-group {
+            .input-group-text {
+                background-color: var(--bs-white);
+                border-color: transparent;
+            }
+            input {
+                background-color: var(--bs-white);
+                border-color: transparent;
+            }
+        }
+        .select2-container {
+            .select2-selection--single {
+                background-color: var(--bs-white);
+                border-color: transparent;
+            }
+        }
+        textarea {
+            background-color: var(--bs-white);
+            border-color: transparent;
+        }
+    }
+    h6 {
+        margin-bottom: 0.83rem;
+    }
+
+    .input-group {
+        .form-control {
+            padding-left: 0;
+            border-color: transparent;
+            &:focus {
+                border-color: transparent;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .profile-block {
+        padding: 60px 80px;
+    }
+}
+
+@media (max-width: 767px) {
+    .profile-block {
+        padding: 60px 30px;
+    }
+}

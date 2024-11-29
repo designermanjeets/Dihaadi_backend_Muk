@@ -1,0 +1,106 @@
+// main-home banner team slider start
+.iq-team-slider {
+  &.swiper {
+    .swiper-slide {
+      .iq-banner-img {
+        img {
+          object-fit: cover;
+          height: 622px;
+          width: 100%;
+        }
+      }
+
+      .card-box {
+        margin-top: -20px;
+
+        .card-description {
+          animation: fade-in 0.5s cubic-bezier(0.390, .575, .565, 1.000) both;
+          background: var(--bs-primary-bg-subtle);
+          padding: 8px 18px;
+          margin: 0 10px;
+
+          .cart-content {
+            .desc {
+              display: none;
+            }
+
+            .heading {
+              color: $headings-color;
+            }
+          }
+        }
+      }
+
+      &.swiper-slide-active {
+        .iq-banner-img {
+          animation: animate-slide-in;
+          animation-duration: 0.5s;
+
+          img {
+            &::after {
+              content: " ";
+              position: absolute;
+              right: 0;
+              left: 0;
+              height: 100%;
+              background: linear-gradient(2deg, rgba(3, 3, 3, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
+              border-radius: 12px;
+            }
+          }
+        }
+
+        .card-box {
+          margin-top: -70px;
+
+          .card-description {
+            background-color: var(--bs-secondary);
+            padding: 24px 32px;
+
+            .cart-content {
+              .heading {
+                font-size: $h4-font-size;
+                color: var(--bs-white);
+              }
+
+              .desc {
+                display: block;
+              }
+            }
+
+            .rating-text {
+              color: var(--bs-white);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/**********Animation***************/
+@keyframes animate-slide-in {
+  0% {
+    clip-path: inset(0 0 0 100%);
+    -webkit-clip-path: inset(0 0 0 100%);
+  }
+
+  100% {
+    clip-path: inset(0 0 0 0);
+    -webkit-clip-path: inset(0 0 0 0);
+  }
+}
+
+@media (max-width: 1024.98px) {
+  .iq-team-slider {
+    &.swiper {
+      .swiper-slide {
+        .iq-banner-img {
+          img {
+            object-fit: cover;
+            height: 400px;
+          }
+        }
+      }
+    }
+  }
+}

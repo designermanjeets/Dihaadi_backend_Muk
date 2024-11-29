@@ -1,0 +1,28 @@
+[data-bs-theme="dark"] {
+    $gray-900: #020716;
+    --#{$prefix}gray-900: #{$gray-900};
+    --#{$prefix}gray-900-rgb: #{to-rgb($gray-900)};
+    $gray-700: #050c21;
+    --#{$prefix}gray-700: #{$gray-700};
+    --#{$prefix}gray-700-rgb: #{to-rgb($gray-700)};
+    $gray-600: #bfbfbf;
+    --#{$prefix}gray-600: #{$gray-600};
+    --#{$prefix}gray-600-rgb: #{to-rgb($gray-600)};
+    $gray-500: #2f334f;
+    --#{$prefix}gray-500: #{$gray-500};
+    --#{$prefix}gray-500-rgb: #{to-rgb($gray-500)};
+    $gray-400: #1c1e2f;
+    --#{$prefix}gray-400: #{$gray-400};
+    --#{$prefix}gray-400-rgb: #{to-rgb($gray-400)};
+    $gray-300: #1c1f34;
+    --#{$prefix}gray-300: #{$gray-300};
+    --#{$prefix}gray-300-rgb: #{to-rgb($gray-300)};
+    $gray-200: #19191a;
+    --#{$prefix}gray-200: #{$gray-200};
+    --#{$prefix}gray-200-rgb: #{to-rgb($gray-200)};
+    $gray-100: #000;
+    --#{$prefix}gray-100: #{$gray-100};
+    --#{$prefix}gray-100-rgb: #{to-rgb($gray-100)};
+    --#{$prefix}light: var(--#{$prefix}gray-300);
+    --#{$prefix}light-rgb: var(--#{$prefix}gray-300-rgb);
+}

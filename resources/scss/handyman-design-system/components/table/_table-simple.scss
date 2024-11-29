@@ -1,0 +1,27 @@
+.simple-table {
+  table {
+      tbody {
+          tr {
+              &:last-child {
+                  td {
+                      border-bottom-width: 0;
+                  }
+              }
+          }
+      }
+  }
+}
+
+table.dataTable.table-striped>tbody>tr.odd>*{
+  box-shadow: unset;
+}
+
+#booking-datatable{
+    tbody{
+        &.row{
+            >*{
+                width: 100%;
+            }
+        }
+    }
+}

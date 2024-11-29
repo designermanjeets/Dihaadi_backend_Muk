@@ -1,0 +1,42 @@
+.iq-qty-btn {
+    height: 54px;
+    border-radius: $input-border-radius;
+    background-color: $input-bg;
+    border: $input-border-width solid $input-border-color;
+
+    .iq-quantity-plus,
+    .iq-quantity-minus {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        padding: 0 12px;
+        color: var(--#{$variable-prefix}body-color);
+
+        &:hover{
+            color: $headings-color;
+        }
+    }
+
+    .input-display {
+        background-color: var(--#{$variable-prefix}gray-200);
+        border: none;
+        outline: none;
+        width: 50px;
+        text-align: center;
+    }
+}
+
+.iq-status-switch {
+    .form-check-input {
+        &:checked {
+            border-color: var(--#{$variable-prefix}info);
+            background-color: var(--#{$variable-prefix}info);
+        }
+
+        &:not(:checked) {
+            border-color: var(--#{$variable-prefix}danger);
+            background-color: var(--#{$variable-prefix}danger);
+            background-image: escape-svg($form-switch-checked-bg-image),
+        }
+    }
+}

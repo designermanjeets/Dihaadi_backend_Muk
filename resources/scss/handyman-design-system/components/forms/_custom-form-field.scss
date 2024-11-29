@@ -1,0 +1,23 @@
+// custom form field
+.custom-form-field {
+  .form-control,
+  .input-group-text {
+    background-color: var(--bs-body-bg);
+  }
+
+  .form-control {
+    &:focus {
+      border-color: transparent;
+    }
+  }
+
+  .select2-container {
+    .select2-selection--single {
+      background-color: var(--bs-body-bg);
+    }
+  }
+
+  .iq-qty-btn {
+    background-color: var(--bs-body-bg);
+  }
+}

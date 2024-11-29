@@ -1,0 +1,35 @@
+.iq-popup-video{
+    .iq-video{
+        a{
+            z-index: 1;
+
+            .icon{
+                z-index: 2;
+            }
+
+            &::before{
+                content: "";
+                height: 56px;
+                width: 56px;
+                line-height: 56px;
+                background-color: var(--#{$variable-prefix}primary);
+                opacity: 0.8;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%,-50%);
+                transform: translate(-50%,-50%);
+                -webkit-border-radius: 50%;
+                border-radius: 50%;
+                transition: all .3s ease-out;
+            }
+
+            &:hover{
+                &::before{
+                    height: 70px;
+                    width: 70px;
+                }
+            }
+        }
+    }
+}

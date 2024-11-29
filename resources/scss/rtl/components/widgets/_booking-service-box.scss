@@ -1,0 +1,22 @@
+.booking-service-box {
+  .booking-service-meta {
+    li {
+      padding-left: 12px;
+      margin-left: 6px;
+      padding-right: 0;
+      margin-right: 0;
+      &::after {
+        left: 0;
+        right: auto;
+      }
+      &:last-child {
+        padding-left: 0;
+        margin-left: 0;
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+}

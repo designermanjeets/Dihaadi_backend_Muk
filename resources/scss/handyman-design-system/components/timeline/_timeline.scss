@@ -1,0 +1,17 @@
+.iq-timeline {
+    margin: 0 0 0 5px;
+    border-left: 3px solid #f2edff;
+    li {
+        margin-left: 15px;
+        padding: 15px 15px 0 5px;
+        .timeline-dots {
+            position: absolute;
+            top: 20px;
+            left: -24px;
+            border: 3px solid var(--bs-primary);
+            border-radius: 90px;
+            padding: 5px;
+            background: $white;
+        }
+    }
+} 

@@ -1,0 +1,38 @@
+.iq-testimonial {
+  padding: 48px;
+  margin-top: 25px;
+
+  .quote {
+    height: 48px;
+    width: 48px;
+    line-height: 48px;
+    background-color: var(--bs-primary-bg-subtle);
+    position: absolute;
+    top: -25px;
+    right: 48px;
+
+    img {
+      object-fit: cover;
+      max-width: 40px;
+    }
+  }
+
+  .testimonial-content {
+    font-size: 18px;
+    line-height: 2;
+    font-style: italic;
+    font-family: $headings-font-family;
+  }
+}
+
+.ratting {
+  svg {
+    color: var(--bs-yellow);
+  }
+}
+
+@media (max-width: 1024px) {
+  .iq-testimonial {
+    padding: 32px;
+  }
+}

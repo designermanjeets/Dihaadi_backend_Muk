@@ -1,0 +1,16 @@
+.error-bg-one {
+    right: 40px;
+    top: 40px;
+}
+
+.error-bg-two {
+    left: 40px;
+    bottom: 40px;
+}
+
+@media (max-width:767px) {
+    .error-bg-one,
+    .error-bg-two {
+        display: none;
+    }
+}

@@ -1,0 +1,6 @@
+@include media-breakpoint-down(xl){
+    .mobile-offcanvas{
+        right: 0;
+        left: auto;
+    }
+}

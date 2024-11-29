@@ -1,0 +1,18 @@
+.nav-slider{
+    position: relative;
+    border-radius: 0;
+    .nav-link{
+        &.active {
+            background-color: transparent;
+        }
+    }
+    .nav-item {
+        z-index: 3;
+    }
+    .nav-slider-thumb {
+        z-index: 1 !important;
+        width: 100%;
+        color: var(--#{$variable-prefix}primary);
+        background: var(--#{$variable-prefix}primary);
+    }
+}

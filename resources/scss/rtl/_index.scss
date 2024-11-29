@@ -1,0 +1,31 @@
+[dir="rtl"] {
+    @import "utilities/utilities-reset";
+    @import "utilities/utilities";
+    @import "../bootstrap/utilities/api";
+
+    @import "./reboot/reboot";
+    @import "components/button/bs-btn";
+    @import "./components/badge/badge";
+    @import "components/button/fixed-btn";
+    @import "components/progressbar/progressbar";
+    @import "components/profile/profile";
+    @import "components/widgets/plugins-index";
+    @import "components/button-group/button-group";
+    @import "components/forms/form-check";
+    @import "components/dropdown/bs-dropdown";
+    @import "components/timeline/simple-timeline";
+    @import "./components/table/bs-table";
+    @import "components/swiper/swiper";
+    @import "components/nav/navbar";
+    @import "components/nav/header";
+    @import "components/select2/select2";
+    @import "components/footer/footer";
+
+    @import "custom/ui-kit/ui-kit";
+    @import "custom/auth/auth";
+    @import "custom/pages/profile";
+    @import "custom/booking-wizard";
+
+    // @import "./components/pro/pro-components";
+    @import "globle";
+}

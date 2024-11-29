@@ -1,0 +1,119 @@
+.status-timeline{
+    .status-timeline-wrapper{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 35px;
+
+        .timeline-time-block {
+            padding-right: 50px;
+            flex: 1 1 0;
+        }
+
+        .timeline-content-block{
+            padding-left: 50px;
+            flex: 1 1 0;
+        }
+
+        .timline-border{
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 100%;
+    
+            .icon{
+                line-height: normal;
+                vertical-align: top;
+            }
+    
+            &::after{
+                content: "";
+                width: 1px;
+                height: calc(100% - 50px);
+                background-color: var(--bs-border-color);
+                position: absolute;
+                bottom: 15px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+    
+            .icon-fill{
+                display: none;
+                color: var(--bs-primary);
+            }
+
+            .icon-outline{
+                color: var(--bs-body-color);
+            }
+        }
+    }
+
+    // Done
+    li{
+        &.done{
+            .status-timeline-wrapper{
+                .timline-border{
+                    .icon-outline{
+                        display: none;
+                    }
+
+                    .icon-fill{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+    // Active
+    li{
+        &.active{
+            .status-timeline-wrapper{
+                .timline-border{
+                    .icon-outline{
+                        color: var(--bs-primary);
+                    }
+                }
+            }
+        }
+    }
+
+    // Last Element
+    li{
+        &:last-child{
+            .status-timeline-wrapper{
+                padding-bottom: 0;
+
+                .timline-border{
+                    &::after{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767.98px){
+    .status-timeline{
+        .status-timeline-wrapper{
+            display: block;
+            padding-left: 40px;
+
+            .timeline-time-block {
+                padding-right: 0;
+            }
+    
+            .timeline-content-block{
+                padding-left: 0;
+                margin-top: 8px;
+            }
+
+            .timline-border{
+                left: 0;
+                transform: none;
+            }
+        }
+    }
+}
+

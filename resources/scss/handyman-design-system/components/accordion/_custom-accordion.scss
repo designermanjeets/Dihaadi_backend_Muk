@@ -1,0 +1,49 @@
+.service-accordian {
+    .accordion-item {
+        border: none;
+        border-bottom: 1px solid var(--bs-border-color);
+        color: var(--bs-body-color);
+    }
+
+    .accrodion-title {
+        padding: 30px 30px 30px 0;
+        position: relative;
+        cursor: pointer;
+
+        .question,
+        .title {
+            font-weight: 600;
+        }
+
+        .icon-accrodion {
+            font-size: 14px;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+
+            &.icon-inactive {
+                color: var(--bs-primary);
+                display: none;
+            }
+
+            &.icon-active {
+                display: block;
+            }
+        }
+
+        &.collapsed {
+            .icon-inactive {
+                display: block;
+            }
+
+            .icon-active {
+                display: none;
+            }
+        }
+    }
+
+    .accordion-body {
+        padding: 0 0 30px 0;
+    }
+}

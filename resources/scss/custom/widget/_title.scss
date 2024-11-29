@@ -1,0 +1,33 @@
+.iq-title-box{
+    &.center{
+        margin-bottom: 60px;
+    }
+    margin-bottom: 32px;
+    .highlighted-text {
+        position: relative;
+        display: inline-block;
+        z-index: 9;
+        
+        .highlighted-image {
+            svg {
+                position: absolute;
+                width: 100%;
+                display: block;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: -1;
+                animation: 0.5s down-leave ease-in;
+                color: var(--bs-primary);
+            }
+        }
+    }
+}
+
+@media (max-width:767px){
+    .iq-title-box{
+        &.center{
+            margin-bottom: 32px;
+        }
+    }
+}

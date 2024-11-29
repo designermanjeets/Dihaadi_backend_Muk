@@ -1,0 +1,16 @@
+footer {
+  .custom-border-left {
+    border-right: 1px solid var(--bs-border-color);
+    border-left: 0;
+  }
+}
+
+.newsletter-form {
+  .form-control {
+    padding: 0 0 0 100px;
+  }
+  .submit-btn{
+    left: 0;
+    right: auto;
+  }
+}

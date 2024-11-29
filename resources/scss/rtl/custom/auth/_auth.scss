@@ -1,0 +1,24 @@
+.custom-btn-close {
+  right: auto;
+  left: -1.25rem;
+}
+
+.authontication-forms {
+  .modal-body {
+    .iq-login-form {
+      .input-group {
+        input,
+        textarea {
+          padding-right: 0;
+          padding-left: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575.98px){
+  .custom-btn-close{
+    left: -.8rem;
+  }
+}

@@ -1,0 +1,12 @@
+.form-group-filled{
+    .input-group-text, .form-control {
+        background-color: var(--#{$variable-prefix}body-bg);
+    }
+}
+
+.form-label{
+    font-family: $headings-font-family;
+    color: var(--bs-heading-color);
+    font-weight: $headings-font-weight;
+    text-transform: capitalize;
+}

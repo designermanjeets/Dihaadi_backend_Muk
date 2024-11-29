@@ -1,0 +1,116 @@
+.form-group{
+    margin-bottom: $spacer;
+    .input-group-text {
+        color: $gray-500;
+    }
+}
+.form-group-alt{
+    &.input-group{
+        box-shadow: $box-shadow-sm;
+        border-radius: $border-radius-sm;
+        .input-group-text{
+            color: $gray-500;
+        }
+        > :not(:first-child):not(.dropdown-menu){
+            box-shadow: unset;
+            &.input-group-text {
+                border: 0;
+                padding-left: 0;
+            }
+        }
+        > :not(:last-child):not(.dropdown-menu){
+            box-shadow: unset;
+            padding-right: 0;
+            &.input-group-text {
+                border: 0;
+            }
+        }
+    }
+    .form-control {
+        border: 0;
+        box-shadow: $box-shadow-sm;
+    }
+}
+
+.input-group-text{
+    background-color: var(--bs-gray-300);
+}
+
+input,
+textarea{
+   &:disabled{
+    +.input-group-text{
+        background-color: var(--bs-gray-400);
+    }
+   }
+}
+
+.form-select{
+    box-shadow: none;
+    &:focus{
+
+        box-shadow: none;
+    }
+}
+.form-control {
+    &[readonly]{
+        background-color: $input-bg;
+    }
+}
+
+form{
+    .form-control{
+        height: 54px;
+    }
+
+    textarea{
+        &.form-control{
+            padding: 1rem;
+            height: 150px;
+        }
+    }
+}
+
+.form-collapse {
+    .edit-date-icon{
+        color: $secondary;
+
+        &.collapsed{
+            color: $primary;
+        }
+    }
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.input-group{
+    &.icon-right{
+        .form-control{
+            padding-right: 0;
+        }
+    }
+}
+
+.input-group{
+    &.icon-left{
+        .form-control{
+            padding-left: 0;
+        }
+    }
+}
+
+.input-group{
+  >.form-control, >.form-select{
+    &:focus{
+        z-index: 3;
+    }
+  }
+
+  >.form-floating{
+    &:focus-within{
+        z-index: 3;
+    }
+  }
+}

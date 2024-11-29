@@ -1,0 +1,34 @@
+.circle-clip-effect::after {
+  right: 0;
+  left: auto;
+  clip-path: circle(0% at 0% 100%);
+}
+
+.circle-clip-effect:hover::after,
+.swiper-slide-active .circle-clip-effect::after {
+  clip-path: circle(100%);
+}
+
+.iq-social-list-text {
+  li {
+    &::after {
+      left: 0;
+      right: auto;
+    }
+  }
+}
+
+.category-tab-list {
+  .nav-tabs {
+    padding-right: 0;
+  }
+}
+
+.iq-footer-catogery-list {
+  li{
+    &::after{
+      right: auto;
+      left: 0;
+    }
+  }
+}
