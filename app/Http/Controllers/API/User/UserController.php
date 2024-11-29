@@ -26,6 +26,7 @@ use App\Models\UserDocument;
 class UserController extends Controller
 {
 	use NotificationTrait;
+	// Added by Mukesh
 	// public function register(UserRequest $request) {
 	// 	$input = $request->all();
 	// 	$email = $input['email'];
